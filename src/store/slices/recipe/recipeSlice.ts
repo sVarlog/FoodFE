@@ -1,18 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { getRequestThunk } from "./recipeThunk";
 
-export interface CamerasState {
+export interface RecipeState {
     isLoading: boolean;
     data: null;
 }
 
-const initialState: CamerasState = {
+const initialState: RecipeState = {
     isLoading: false,
     data: null,
 };
 
-const camerasSlice = createSlice({
-    name: "cameras",
+const recipeSlice = createSlice({
+    name: "recipes",
     initialState,
     reducers: {},
     extraReducers: (builder) => {
@@ -22,4 +22,4 @@ const camerasSlice = createSlice({
     },
 });
 
-export default camerasSlice.reducer;
+export default recipeSlice.reducer;
